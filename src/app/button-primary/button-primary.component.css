@@ -1,0 +1,17 @@
+.button-primary{
+    width: 280px;
+    height: 43px;
+    border:none;
+    border-radius: 5px;
+    background-color: #009ABB;
+    color: white;
+    padding-top: 8px;
+    padding-bottom: 13px;
+    padding-left: 54px;
+    padding-right: 54px;
+    font-family: Open Sans Regular;
+    font-size:16px ;
+    
+    
+
+}

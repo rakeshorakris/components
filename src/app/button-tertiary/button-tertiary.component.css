@@ -1,0 +1,12 @@
+.btn-tertiary{
+    width: 85px;
+    height: 21px;
+    /* padding-top: 3px;
+    padding-bottom: 4px; */
+    font-size: 10px;
+    font-family: open Sans Regular;
+    color:#09425A;
+    background-color: #F0F4F5;
+    border: none;
+    border-radius: 2px;
+}

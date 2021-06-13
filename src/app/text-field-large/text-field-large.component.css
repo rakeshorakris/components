@@ -1,0 +1,10 @@
+.large{
+    height: 29px;
+    width: 272px;
+    border-radius: 5px;
+    border-color: #AABEC6;
+    outline: none;
+}
+.large:focus{
+    border:1px solid #009abb; 
+}
