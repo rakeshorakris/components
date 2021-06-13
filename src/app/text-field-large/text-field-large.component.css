@@ -2,7 +2,7 @@
     height: 29px;
     width: 272px;
     border-radius: 5px;
-    border-color: #AABEC6;
+    border:1px solid #AABEC6;
     outline: none;
 }
 .large:focus{

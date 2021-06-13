@@ -1,0 +1,31 @@
+.cbox{
+    width: 234px;
+    height: 186px;
+    border:1px solid #009ABB;
+    border-radius: 3px;
+}
+.box-top{
+    width: 234px;
+    height: 29px;
+    font-size: 12px;
+    font-family: Open Sans Regular;
+    padding-top: 5px;
+    color: #009ABB;
+    border-bottom: 1px solid #009ABB;
+
+}
+.box-top-text{
+    padding-left: 12px;
+}
+.box-bottom{
+    width: 234px;
+    height: 157px;
+    border-top: none;
+    padding-left: 12px;
+    /* padding-right: ; */
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 10px;
+    font-family: Open Sans Regular;
+    /* border: 1px solid #009ABB; */
+}
