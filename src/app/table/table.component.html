@@ -1,0 +1,137 @@
+<button (click)="clicked()" 
+[ngClass]="{'btn':checked ,'btn-not':!checked}"
+>
+<span *ngIf='checked' style="position: relative;float: left;margin-top: -5px;margin-left:5px;align-self: center;" >
+<svg xmlns="http://www.w3.org/2000/svg" width="4" height="24" viewBox="0 0 4 24" >
+    <line id="Line_78" data-name="Line 78" y2="20" transform="translate(2 2)" fill="none" stroke="#009abb" stroke-linecap="round" stroke-width="4"/>
+  </svg>
+</span>
+<span style="margin-left: -30px; margin-bottom: -25px; ;">
+    Publications
+</span>
+</button>
+<button (click)="clicked2()" 
+[ngClass]="{'btn':btn2checked,'btn-not':!btn2checked}"
+>
+<span *ngIf='!checked' style="position: relative;float: left;margin-top: -5px;margin-left:5px;align-self: center;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="4" height="24" viewBox="0 0 4 24">
+        <line id="Line_78" data-name="Line 78" y2="20" transform="translate(2 2)" fill="none" stroke="#009abb" stroke-linecap="round" stroke-width="4"/>
+      </svg>
+    </span>
+Trails</button>
+<table class="table-head">
+        <tr class="table-header" *ngIf='checked'>
+
+            <td style="width: 115px; position: relative; float:left; margin-left: 20px;margin-right:290px;">
+                Publication Name</td>
+            <td style="width: 96px; position: relative; float:left; margin-right: 43px;" >Task status</td>
+            <td style="width: 51px; position: relative; float:left;"> Deadline</td>
+            
+        </tr>
+        <tr class="table-header" *ngIf='!checked'>
+            <td style="width: 115px; position: relative; float:left; margin-left: 20px;margin-right:290px;">Clinical Trail</td>
+            <td style="width: 96px; position: relative; float:left; margin-right: 43px;" >Task status</td>
+            <td style="width: 51px; position: relative; float:left;"> Deadline</td>
+        </tr>
+
+    <tr style="padding-bottom: -18px;">
+        <td colspan="4">
+            <hr class="hor-line">
+
+        </td>
+    </tr>
+    <div *ngIf='checked'>
+        <tr *ngFor="let item of data;">
+            <td style="width: 300px; position: relative; float:left; margin-left: 20px; margin-right: 100px;">{{item.PublicationName}}</td>
+            <td  style="width: 100px; position: relative; float:left;  margin-right: 36px;">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" style="margin-right: 7px;margin-bottom:-3px;" >
+                <g id="Group_336" data-name="Group 336" transform="translate(-758 -471)">
+                  <circle id="Ellipse_23" data-name="Ellipse 23" cx="6.5" cy="6.5" r="6.5" transform="translate(758 471)" fill="#aabec6"/>
+                  <g id="icons_Q2" data-name="icons Q2" transform="translate(760.324 474.518)">
+                    <path id="Path_4" data-name="Path 4" d="M7.251,15.44,5.623,13.832a.427.427,0,0,1-.041-.55.387.387,0,0,1,.611-.041l1.343,1.343,4.8-4.8a.407.407,0,0,1,.57.57L7.821,15.44a.387.387,0,0,1-.57,0Z" transform="translate(-5.501 -9.7)" fill="#fff"/>
+                  </g>
+                </g>
+              </svg>
+              </span>{{item.TaskStatus}}</td>
+            <td >{{item.Deadline}}</td>
+            <td ><app-button-tertiary></app-button-tertiary></td>
+            <td><app-button-tertiary></app-button-tertiary></td>
+            <td><app-button-tertiary></app-button-tertiary></td>
+            
+            
+
+        </tr>
+    </div>
+    <div *ngIf='!checked'>
+        <tr *ngFor="let item of data1;" >
+            <td style="width: 300px; position: relative; float:left; margin-left: 20px; margin-right: 100px;">{{item.Clinical}}</td>
+            <td style="width: 100px; position: relative; float:left; margin-right: 36px;">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" style="margin-right: 7px;margin-bottom:-3px;">
+                        <g id="Group_336" data-name="Group 336" transform="translate(-758 -471)">
+                          <circle id="Ellipse_23" data-name="Ellipse 23" cx="6.5" cy="6.5" r="6.5" transform="translate(758 471)" fill="#aabec6"/>
+                          <g id="icons_Q2" data-name="icons Q2" transform="translate(760.324 474.518)">
+                            <path id="Path_4" data-name="Path 4" d="M7.251,15.44,5.623,13.832a.427.427,0,0,1-.041-.55.387.387,0,0,1,.611-.041l1.343,1.343,4.8-4.8a.407.407,0,0,1,.57.57L7.821,15.44a.387.387,0,0,1-.57,0Z" transform="translate(-5.501 -9.7)" fill="#fff"/>
+                          </g>
+                        </g>
+                      </svg>
+                      
+                </span>{{item.TaskStatus}}</td>
+            <td>{{item.Deadline}}</td>
+            <td><app-button-tertiary></app-button-tertiary></td>
+            <td><app-button-tertiary></app-button-tertiary></td>
+            <td><app-button-tertiary></app-button-tertiary></td>
+            
+
+        </tr>
+    </div>
+    <!-- <tr>
+        <td> String Generation</td>
+        <td>Completed</td>
+        <td>15/09/2021</td>
+        <td><button>Assign task</button></td>
+        <td><button>Review</button></td>
+        <td><app-button-tertiary></app-button-tertiary></td>
+    </tr>
+    <tr>
+        <td> String Generation</td>
+        <td>Completed</td>
+        <td>15/09/2021</td>
+        <td><button>Assign task</button></td>
+        <td><button>Review</button></td>
+        <td><app-button-tertiary></app-button-tertiary></td>
+    </tr>
+    <tr>
+        <td> String Generation</td>
+        <td>Completed</td>
+        <td>15/09/2021</td>
+        <td><button>Assign task</button></td>
+        <td><button>Review</button></td>
+        <td><app-button-tertiary></app-button-tertiary></td>
+    </tr>
+    <!-- <tr>
+        <td> String Generation</td>
+        <td>Completed</td>
+        <td>15/09/2021</td>
+        <td><button>Assign task</button></td>
+        <td><button>Review</button></td>
+        <td><app-button-tertiary></app-button-tertiary></td>
+    </tr> -->
+    <!-- <tr>
+        <td> String Generation</td>
+        <td>Completed</td>
+        <td>15/09/2021</td>
+        <td><button>Assign task</button></td>
+        <td><button>Review</button></td>
+        <td><app-button-tertiary></app-button-tertiary></td>
+    </tr>
+    <tr>
+        <td> String Generation</td>
+        <td>Completed</td>
+        <td>15/09/2021</td>
+        <td><button>Assign task</button></td>
+        <td><button>Review</button></td>
+        <td><app-button-tertiary></app-button-tertiary></td>
+    </tr>  -->
+</table>

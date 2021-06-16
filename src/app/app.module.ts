@@ -9,6 +9,7 @@ import { ButtonSecondaryComponent } from './button-secondary/button-secondary.co
 import { ButtonTertiaryComponent } from './button-tertiary/button-tertiary.component';
 import { ToggleComponent } from './toggle/toggle.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+import { TableComponent } from './table/table.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
     ButtonTertiaryComponent,
     ToggleComponent,
     CheckboxComponent,
+    TableComponent,
     // MatIconModule
   ],
   imports: [
